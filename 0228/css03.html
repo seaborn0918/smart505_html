@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 단위</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+
+    <style>
+        .px1 { font-size: 8px; }
+        .px2 { font-size: 16px; }
+        .px3 { font-size: 24px; }
+        .px4 { font-size: 32px; }
+
+        .pt1 { font-size: 50%; }
+        .pt2 { font-size: 100%; }
+        .pt3 { font-size: 150%; }
+        .pt4 { font-size: 200%; }
+
+        .em1 { font-size: 0.5em; }
+        .em2 { font-size: 1em; } 
+        .em3 { font-size: 1.5em; }
+        .em4 { font-size: 2em; }
+
+        .rem1 { font-size: 0.5rem; }
+        .rem2 { font-size: 1rem; }
+        .rem3 { font-size: 1.5rem; }
+        .rem4 { font-size: 2rem; }
+
+        .em5 { font-size: 2em; }
+        .rem5 { font-size: 2rem; }
+        
+        body { font-family: 'Nanum Myeongjo', serif; }
+
+    </style>
+</head>
+<body>
+    <!-- CSS에서 많이 사용하는 단위 -->
+    <!-- px : 모니터의 픽셀 값을 기준으로 하여 사용하는 단위, html 문서의 기본단위, 16px이 기본값 -->
+    <!-- % : px을 %비율로 표시하는 단위, 16px = 100% -->
+    <!-- em : px을 비율로 표시하는 단위, 비율의 기준이 부모 태그의 폰트 크기, 16px = 1em -->
+    <!-- rem : px을 비율로 표시하는 단위, 비율의 기준이 html 태그의 폰트 크기, 16px = 1rem -->
+
+    <div id="div01">
+        <p class="px1">px을 사용하여 크기 표현, 8px</p>
+        <p class="px2">px을 사용하여 크기 표현, 16px</p>
+        <p class="px3">px을 사용하여 크기 표현, 24px</p>
+        <p class="px4">px을 사용하여 크기 표현, 32px</p>
+    </div>
+    
+    <div id="div02">
+        <p class="pt1">%를 사용하여 크기 표현, 50%</p>
+        <p class="pt2">%를 사용하여 크기 표현, 100%</p>
+        <p class="pt3">%를 사용하여 크기 표현, 150%</p>
+        <p class="pt4">%를 사용하여 크기 표현, 200%</p>
+    </div>
+
+    <div id="div03">
+        <p class="em1">em을 사용하여 크기 표현, 0.5em</p>
+        <p class="em2">em을 사용하여 크기 표현, 1em</p>
+        <p class="em3">em을 사용하여 크기 표현, 1.5em</p>
+        <p class="em4">em을 사용하여 크기 표현, 2em</p>
+    </div>
+
+    <div id="div04">
+        <p class="rem1">rem을 사용하여 크기 표현, 0.5rem</p>
+        <p class="rem2">rem을 사용하여 크기 표현, 1rem</p>
+        <p class="rem3">rem을 사용하여 크기 표현, 1.5rem</p>
+        <p class="rem4">rem을 사용하여 크기 표현, 2rem</p>
+    </div>
+
+    <div id="div05">
+        <!-- em과 rem은 둘다 비율로 글자크기를 지정하지만 비율의 기준점이 다르기 때문 -->
+        <!-- em은 직계 부모 태그의 font-size를 기준으로 비율을 지정 -->
+        <!-- rem은 html 태그의 font-size를 기준으로 비율을 지정함-->
+        <h3>em과 rem의 차이</h3>
+        <div style="border: 1px solid black; margin: 5px; padding: 5px;">
+            <p class="em5">em으로 설정한 2em</p>
+            <div style="font-size: 32px;">
+                <p class="em5">em으로 설정한 2em</p>
+            </div>
+        </div>
+        <div style="border: 1px solid black; margin: 5px; padding: 5px;">
+            <p class="rem5">rem으로 설정한 2rem</p>
+            <div style="font-size: 32px;">
+                <p class="rem5">rem으로 설정한 2rem</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

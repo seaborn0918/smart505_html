@@ -1,0 +1,101 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>css 사용하기</title>
+
+        <style>
+            * {
+                margin: 0;
+            }
+
+            p {
+                font-size: large;
+                /* !important 사용 시 해당 속성은 최우선으로 적용됨, 아래에 동일한 속성의 값이 변경되더라도 해당 속성은 변경되지 않음 */
+                font-style: italic !important;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            h1 {
+                color: chocolate;
+                font-weight: 400;
+                text-align: end;
+            }
+
+            #blue-text {
+                font-size: 24px;
+                color: blue;
+            }
+
+            .red-text{
+                color: red;
+                font-style: normal;
+            }
+
+            .bg-yellow{
+                background-color: yellow;
+                border: 1px solid black;
+                margin: 5px;
+            }
+
+            #div01 {
+                margin: 20px;
+                border: 1px solid black;
+            }
+
+            #div01 > h4 {
+                color: darkcyan;
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+            #div01 h4 {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <p>
+        <img src="002.jpg" alt="동그리">
+        <br><hr><br>
+        <div>
+            <h1>태그 선택자</h1>
+            <p>헌법재판소의 조직과 운영 기타 필요한 사항은 법률로 정한다.</p>
+            <p>국군의 조직과 편성은 법률로 정한다. 선거와 국민투표의 공정한 관리 및 정당에 관한 사무를 처리하기 위하여 선거관리위원회를 둔다.</p>
+            <p>헌법에 의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은 효력을 가진다.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur architecto, iste beatae error sint commodi eos eaque vero cum nam. Cupiditate in sit unde, hic eligendi minima quis exercitationem suscipit.</p>
+        </div>
+        <br><hr><br>
+        <div style="margin: 10px;">
+            <h3>id 선택자 사용하기</h3>
+            <h4>기본 모양 사용</h4>
+            <h4 id="blue-text">id 선택자로 모양 변경</h4>
+            <h4>기본 모양 사용</h4>
+        </div>
+        <br><br>
+        <h3>class 선택자 사용하기</h3>
+        <p>변경하지 않은 p 태그</p>
+        <p class="red-text">class 선택자로 변경한 p 태그</p>
+        <h4 class="red-text">class 선택자로 변경한 h4 태그</h4>
+        <h5 class="red-text bg-yellow">class 선택자로 변경한 h5 태그</h5>
+        <br><br>
+        <div>
+            <h3>자식 선택자, 자손 선택자</h3>
+
+            <div id="div01">
+                <h4>자식 선택자 & 자손 선택자로 선택되는 태그</h4>
+                <div>
+                    <h4>자식 선택자로 선택되지 않는 태그 but 자손 선택자로는 선택
+                        <ul>
+                            <li>메뉴 1</li>
+                            <li>메뉴 2</li>
+                            <li>메뉴 3</li>
+                        </ul>
+                    </h4>
+                </div>                
+            </div>
+        </div>
+    </body>
+    </html>

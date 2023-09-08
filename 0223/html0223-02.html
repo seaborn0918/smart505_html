@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱 태그를 사용하지 않은 페이지</title>
+</head>
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        .nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+        }
+
+        .section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            .nav,
+            .article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+<body>
+    <div class="header">
+        <h2>시멘틱 태그를 사용하지 않은 페이지</h2>
+    </div>
+    
+    <div class="section"> <!--section-->
+        <div class="nav"> <!--nav-->
+            <ul>
+                <li><a href="#">메뉴 1</a></li>
+                <li><a href="#">메뉴 2</a></li>
+                <li><a href="#">메뉴 3</a></li>
+            </ul>
+        </div> <!--nav-->
+
+        <div class="article"> <!--article-->
+            <h1>메뉴 1 내용</h1>
+            <p>메뉴 1 화면에 출력할 내용 입력</p>
+            <p>아무거나..</p>
+        </div> <!--article-->
+    </div> <!--section-->
+
+    <div class="footer">
+        <p>Footer</p>
+        <p>made by smart web 505</p>
+    </div>
+</body>
+
+</html>

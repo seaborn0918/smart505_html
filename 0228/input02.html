@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form>
+            <ul>
+                <li>
+                    <input type="checkbox" value="s_3" id="s_3">
+                    <label for="s_3">선물용 3kg</label>
+                    <input type="number" min="0" max="5">개 (최대 5개)
+                </li>
+                <li>
+                    <input type="checkbox" value="s_5" id="s_5">
+                    <label for="s_5">선물용 5kg</label>
+                    <input type="number" min="0" max="3">개 (최대 3개)
+                </li>
+            </ul>
+            <input type="submit" value="확인">
+        </form>
+    </div>
+    <br>
+    <div>
+        <form>
+            <ul>
+                <li>
+                    <input type="checkbox" value="s_3" id="s_31">
+                    <label for="s_31">선물용 3kg</label>
+                    <input type="range" min="0" max="5">개 (최대 5개)
+                </li>
+                <li>
+                    <input type="checkbox" value="s_5" id="s_51">
+                    <label for="s_51">선물용 5kg</label>
+                    <input type="range" min="0" max="3">개 (최대 3개)
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <div>
+        <form>
+            <input type="date" name="date">
+            <input type="month" name="month">
+            <input type="week" name="week">
+            <input type="time" name="time">
+            <input type="datetime-local" name="datetime">      
+            <input type="submit" value="확인">
+        </form>
+    </div><br>
+
+    <div>
+        <form>
+            <label for="user-id">아이디 : </label>
+            <input type="text" id="user-id" name="userId" placeholder="아이디를 입력하세요"><br>
+            <label for="user-pw">비밀번호 : </label>
+            <input type="password" id="user-pw" name="userPw" placeholder="비밀번호를 입력하세요"><br>
+            <label for="user-name">사용자 이름 : </label>
+            <input type="text" id="user-name" name="userName" placeholder="사용자 이름을 입력하세요"><br>
+            
+            <!-- 버튼을 사용하기 위해 input type="submit;reset;button;image"를 사용하는 것보다 시멘틱 태그인 button type="submit;reset;button;image"를 사용하는 것이 좋음 -->
+            <!-- 버튼 사용 시 button과 input의 차이는 버튼 안의 글자를 표현 시 input 태그는 value를 사용하고 button태그는 시작태그와 끝태그 사이에 글자를 입력 -->
+            <button type="submit">확인</button>
+            <input type="reset" value="취소">
+            <button type="button" onclick="alert('클릭했습니다!')">그냥 버튼</button>
+            <button type="image" onclick="alert('이미지 버튼을 클릭했습니다!')"><img src="001.jpg" alt="동글" width="100px"></button>
+        </form>
+    </div><br><br>
+
+    <div>
+        <form>
+            <input type="file"><br>
+            <input type="hidden" name="hiddenItem" value="hidden item"><br>
+            <button type="submit">확인</button>
+        </form>
+    </div><br><br>
+
+    <div>
+        <form>
+            <input type="text" autofocus><br>
+            <input type="text" placeholder="힌트를 출력하는 속성"><br>
+            <input type="text" value="읽기 전용으로 지정" readonly><br>
+            <input type="text" value="비활성화" disabled><br>
+            <input type="text" placeholder="입력이 없으면 메시지 발생" required><br>
+            <button type="submit">확인</button>
+        </form>
+    </div>
+    
+</body>
+</html>

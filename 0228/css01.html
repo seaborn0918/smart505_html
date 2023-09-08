@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 사용하기</title>
+    <!-- CSS : html로 만들어진 웹 페이지에 디자인을 적용하기 위한 것 -->
+    <!-- CSS 적용 방식 -->
+    <!-- 1. inline 방식: html 태그에 직접 style 속성을 사용하여 적용 -->
+    <!-- 2. 내부 스타일 방식: 웹 문서의 head 태그의 자식 태그로 style 태그를 사용 후 적용 -->
+    <!-- 3. 외부 스타일 방식: 외부 CSS 파일을 생성 후 link 태그로 로드하여 사용 -->
+
+    <!-- CSS는 html과 동일하게 웹 문서의 시작부터 끝까지 한줄씩 해석되어 적용함 -->
+    <!-- CSS는 동일한 속성을 변경하는 문장이 여러 줄에 있을 경우 아래에 적용된 내용으로 위에 있는 내용을 덮어씀-->
+    <!-- 외부 스타일 방식이나 내부 스타일 시트 방식보다 inline 방식이 우선 순위가 높음 -->
+    <!-- 보통 CSS를 사용 시 외부 스타일 시트 방식을 사용한 CSS를 먼저 로딩하고, 내부 스타일 시트 방식을 사용하는 style 태그를 사용하고, 마지막에 inline 방식을 사용함 -->
+    <style>
+        h3 {
+            font-size: 32px;
+            color: brown;
+        }
+    </style>
+
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <h1>css를 사용하지 않은 태그</h1>
+    <h2 style="font-size: 32px; color: cadetblue;">inline 방식으로 css를 적용한 태그</h2>
+    <h3>내부 스타일 시트 방식으로 css를 적용한 태그</h3>
+    <h4>외부 스타일 시트 방식으로 css를 적용한 태그</h4>
+</body>
+</html>
